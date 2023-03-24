@@ -1,0 +1,17 @@
+TEST CASE 16 (under TEST PLAN 6)
+
+Description: 
+
+DUEL DUO's 'See all Bots' button should show all the bots when clicked 
+
+Steps: 
+
+1. Open up Duel Duo app on a desktop browser, by opening a browser and going to "localhost:4000".
+
+2. Click the 'See all Bots' buttons
+
+3. wait 5 seconds
+
+Post Conditions: 
+
+1. All the bots that i could potentionaly draw appear on the screen

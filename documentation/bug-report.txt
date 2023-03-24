@@ -1,0 +1,27 @@
+BUG REPORT for TEST CASE 16
+
+March 24th, 2023
+
+Description:
+
+Bots do not show up after 5 seconds after clicked
+
+Steps to Reproduce: 
+
+1. Derected to Duel Duo web app ("localhost:4000")in a desktop browser 
+
+2. clicked on the 'See All Bots" button 
+
+Expected Results:
+
+1. Recieve all the bots that may be options in my draw section
+
+Actual Results:
+
+1. When hoovered over with the mouse it changes color but when clicked nothing is pulled up 
+
+Enviroment:
+
+- Version 111.0.5563.110 (Official Build) (arm64)
+- macOS Ventura 13.2.1
+

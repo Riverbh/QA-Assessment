@@ -1,0 +1,34 @@
+TEST PLAN 6 for DUEL DUO WEBAPP
+
+Overview:
+
+Test the DUEL DUO functionality
+
+links:
+
+localhost:4000   lol 
+
+Test Criteria
+
+-Ensure the "see all bots" button is function and pulls up all the Bots
+
+-Ensure that I can click the draw button and it will pull up random Bot options
+
+-Ensure that the Remove from Duo button puts the robot back up to the options list
+
+-Ensure that wether i win or lose it marks it down in the right area 
+
+Entry Criteria:
+
+- Has access to internet 
+
+- Has a non-mobile browser available 
+
+Exit Criteria:
+
+-All test pass
+
+Other details:
+
+- This assumes a fast internet connection
+
