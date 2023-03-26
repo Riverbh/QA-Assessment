@@ -18,3 +18,20 @@ test('Title shows up when page loads', async () => {
     const displayed = await title.isDisplayed()
     expect(displayed).toBe(true)
 })
+
+
+test('see all bots is on the page', async () => {
+    const buttonId = await driver.findElement(By.id('see-all'))
+
+    const isDisplayed = await buttonId.isDisplayed()
+
+    expect(isDisplayed).toBe(true)
+})
+
+test('draw button is on the page', async () => {
+    const drawButtonId = await driver.findElement(By.id('draw'))
+
+    const isDisplayed = await drawButtonId.isDisplayed()
+
+    expect(isDisplayed).toBe(true)
+})

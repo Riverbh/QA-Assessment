@@ -7,7 +7,7 @@ describe('shuffleArray should', () => {
     }),
 
     test('check that all the same items are in the array', () => {
-        expect(shuffleArray('utils')).toEqual('array')
+        expect(shuffleArray('utils')).toBe('array')
     })
 
 })
