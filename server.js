@@ -5,12 +5,26 @@ const {shuffleArray} = require('./utils')
 
 app.use(express.json())
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '7d46e3bb7c7b4d5a897ccbcdff21147c',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
 app.use(express.static('public'))
 
 app.get('/api/robots', (req, res) => {
+    
     try {
+        rollbar.info('got bots')
         res.status(200).send(botsArr)
     } catch (error) {
+        rollbar.warning(`didn't get list of bots`)
         console.log('ERROR GETTING BOTS', error)
         res.sendStatus(400)
     }
@@ -21,9 +35,11 @@ app.get('/api/robots/five', (req, res) => {
         let shuffled = shuffleArray(bots)
         let choices = shuffled.slice(0, 5)
         let compDuo = shuffled.slice(6, 8)
+        rollbar.info('got 5 random bots')
         res.status(200).send({choices, compDuo})
     } catch (error) {
         console.log('ERROR GETTING FIVE BOTS', error)
+        rollbar.warning(`didn't get radnom list of 5 bots`)
         res.sendStatus(400)
     }
 })
